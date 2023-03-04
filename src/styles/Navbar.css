@@ -1,0 +1,27 @@
+.buttons {
+    border-radius: 20px 5px;
+    border: 1px solid #e4e4ea;
+}
+
+.list-item {
+    position: absolute;
+    right:10px;
+    z-index: 1;
+}
+
+.mobile-navbar {
+    position: absolute;
+    border-left: 1px solid #919294;
+    border-bottom: 1px solid #919294;
+    border-radius: 20px;
+    right: 0;
+    width: 150px;
+    padding-inline: 20px;
+    padding-bottom: 7px;
+    text-align: right;
+    transition: all 1s ease-out;
+}
+
+.no-menu {
+    display: none;
+}

@@ -15,6 +15,7 @@ const Banner = () => {
             .then((response) => {
                 setBanner(response.data);
             });  
+            console.log(data);
             setLoading(true);
         }   
         catch(error) {
@@ -34,7 +35,7 @@ const Banner = () => {
     },[]);
 
     return (
-        <div>
+        <div className='hidden md:block'>
             <div className='mx-auto mt-6 w-1/6'>
                 {loading? <img src={banner.image} alt='banner' /> : 
                 <img className='w-2/4 mx-auto' src={spinner} alt='loading' />}    
@@ -45,11 +46,13 @@ const Banner = () => {
                     <p className='font-bold text-xl'>Search:</p>
                 </div>
             </div>  
-            <div className='w-2/4 mx-auto relative'>
+            <div className='w-2/4 mx-auto md:flex md:justify-center flex-col'>
+                <div className='w-10 mx-auto mt-6 z-10'>
+                    <img className='w-3/4' src={arrow} alt='arrow' />
+                </div>
+                <div className='-mt-24'>
                     <img  src={ring} alt='ring' />
-                    <div className='absolute top-0 left-310px md:flex md:justify-center mt-6'>
-                        <img className='w-3/4' src={arrow} alt='arrow' />
-                    </div>  
+                </div>                      
             </div>
             
         </div>

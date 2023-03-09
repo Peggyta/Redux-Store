@@ -28,8 +28,8 @@ const HamburgerMenu = () => {
                     <button onClick={()=> setClicked(!clicked)}>
                         {clicked ? <Icon className='text-grey' icon={cancelCircle} size={22} /> : <Icon className='text-grey' icon={menu} size={22} /> }
                     </button> 
-                    <div>
-                        <ul className={clicked ? 'mobile-navbar': 'no-menu'}>
+                    <div className={clicked ? 'mobile-navbar': 'no-menu'}>
+                        <ul>
                             <li className='py-2'>
                                 <Link to='#'>Home</Link>
                             </li>

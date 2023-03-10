@@ -12,7 +12,7 @@ const Navbar = () => {
         <div className='max-w-full'>
             <header className='mt-12'>
                 <div className='flex items-center justify-center mb-3'>
-                    <Link to='#'>
+                    <Link to='/'>
                         <img className='w-32' src={logo} alt='logo' />
                     </Link>
                 </div>
@@ -23,10 +23,10 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to='#' className='buttons md:bg-lightblue px-4 py-1'>Register</Link>
+                        <Link to='/register' className='buttons md:bg-lightblue px-4 py-1'>Register</Link>
                     </li>
                     <li className='mx-1'>
-                        <Link to='#' className='buttons md:bg-lightblue px-6 py-1'>Login</Link>
+                        <Link to='/login' className='buttons md:bg-lightblue px-6 py-1'>Login</Link>
                     </li>
                     <li className='mx-16'>
                         <Link to='#'>
@@ -34,16 +34,16 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li className='mx-3'>
-                        <Link to='#'>Bestselling</Link>
+                        <Link to='/bestselling'>Bestselling</Link>
                     </li>
                     <li className='mx-3'>
-                        <Link to='#'>Packages</Link>
+                        <Link to='/packages'>Packages</Link>
                     </li>
                     <li className='mx-3'>
-                        <Link to='#'>Products</Link>
+                        <Link to='/products'>Products</Link>
                     </li>
                     <li className='mx-3'>
-                        <Link to='#'><Icon icon={home2} size={22} /></Link>
+                        <Link to='/'><Icon icon={home2} size={22} /></Link>
                     </li>
                 </ul>
             </header>

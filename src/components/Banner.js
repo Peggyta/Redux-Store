@@ -3,6 +3,12 @@ import axios from 'axios';
 import arrow from '../images/arrow.jpg';
 import ring from '../images/ring.jpg';
 import spinner from '../images/spinner.gif';
+import Icon from 'react-icons-kit';
+import {truck} from 'react-icons-kit/fa/truck';
+import {checkSquareO} from 'react-icons-kit/fa/checkSquareO';
+import {dollar} from 'react-icons-kit/fa/dollar';
+import {headphones} from 'react-icons-kit/iconic/headphones';
+
 
 const Banner = () => {
     const[banner, setBanner] = useState([]);
@@ -54,7 +60,14 @@ const Banner = () => {
                     <img  src={ring} alt='ring' />
                 </div>                      
             </div>
-            
+                <div className='mx-auto md:flex md:items-center md:justify-between w-1/6'>
+                    <div className='text-grey'><Icon icon={truck} size={38} /></div>
+                    <div className='text-grey'><Icon icon={dollar} size={38} /></div>
+                </div>     
+            <div className='mx-auto md:flex md:items-center md:justify-between w-2/4 -mt-24' >
+                    <div className='text-grey'><Icon icon={headphones} size={38} /></div>
+                    <div className='text-grey'><Icon icon={checkSquareO} size={38} /></div>
+            </div>
         </div>
     );
 };

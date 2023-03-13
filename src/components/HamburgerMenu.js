@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import {Icon} from 'react-icons-kit';
 import {menu} from 'react-icons-kit/icomoon';
-import {cancelCircle} from 'react-icons-kit/icomoon';
+import {times} from 'react-icons-kit/fa/times'
 import {cart} from 'react-icons-kit/icomoon';
 import {search} from 'react-icons-kit/icomoon';
 import '../styles/Navbar.css';
@@ -26,7 +26,7 @@ const HamburgerMenu = () => {
                 </div>
                 <div className='relative'>
                     <button onClick={()=> setClicked(!clicked)}>
-                        {clicked ? <Icon className='text-grey' icon={cancelCircle} size={22} /> : <Icon className='text-grey' icon={menu} size={22} /> }
+                        {clicked ? <Icon className='text-grey' icon={times} size={26} /> : <Icon className='text-grey' icon={menu} size={22} /> }
                     </button> 
                     <div className={clicked ? 'mobile-navbar': 'no-menu'}>
                         <ul>

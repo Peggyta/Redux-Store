@@ -4,9 +4,16 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     colors: {
-      'white': '#ffffff',
+      'grey': '#919294',
+      'rosewood': '#d8a496',
+      'lightblue': '#f4f5f7',
     },
-    extend: {},
+    extend: {
+      spacing: {
+        '1.5px': '1.5px',
+        '260px': '260px',
+      }
+    },
   },
   plugins: [
     {

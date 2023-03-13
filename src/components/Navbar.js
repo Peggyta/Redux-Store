@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import '../styles/Navbar.css';
 import { Link } from 'react-router-dom';
 import logo from '../images/logo.jpg';
@@ -8,6 +9,7 @@ import {cart} from 'react-icons-kit/icomoon';
 import {search} from 'react-icons-kit/icomoon';
 
 const Navbar = () => {
+    const state = useSelector(state => state.cartState);
     return (
         <div className='max-w-full'>
             <header className='mt-12'>
@@ -21,6 +23,7 @@ const Navbar = () => {
                         <Link to='#'>
                             <Icon icon={cart} size={22} className='text-rosewood' /> Cart
                         </Link>
+                        <span>{state.itemsCounter}</span>
                     </li>
                     <li>
                         <Link to='/register' className='buttons md:bg-lightblue px-4 py-1'>Register</Link>

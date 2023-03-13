@@ -12,7 +12,7 @@ const Products = () => {
   },[]);
 
     return (
-        <div>
+        <div className='grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 mt-36 px-36'>
           {
             productsState.loading ? <h2>loading...</h2> : 
             productsState.error ? <h2>an error occurred!</h2> :

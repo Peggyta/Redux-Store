@@ -29,6 +29,7 @@ function App() {
           <Route path='/notfound' element={<ErrorPage />} />
           <Route path='/*' element={<Navigate to='/notfound'/>} />
         </Routes>
+        <Products />
       </Provider>
     </div>
   );

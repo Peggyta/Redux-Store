@@ -11,6 +11,7 @@ const sumItems = items => {
 
     let total = items.reduce((total, product)=>
     total+product.price*product.quantity,0).toFixed(2);
+    return {itemsCounter, total};
 }
 const cartReducer = (state=initialState, action) => {
     switch(action.type) {
@@ -34,6 +35,8 @@ const cartReducer = (state=initialState, action) => {
                 selectedItem:[...deletedItems],
                 ...sumItems(deletedItems)
             })
+        default :
+        return state
     }
 }
 

@@ -2,6 +2,8 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import store from './redux/store';
+import WithProducts from './components/WithProducts';
+import WithoutProducts from './components/WithoutProducts';
 import Navbar from './components/Navbar';
 import HamburgerMenu from './components/HamburgerMenu';
 import Banner from './components/Banner';
@@ -20,16 +22,19 @@ function App() {
         <Navbar />
         <HamburgerMenu />
         <Routes>
-          <Route path='/' element={<Banner />} />
-          <Route path='/register' element={<Register />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/bestselling' element={<Bestselling />} />
-          <Route path='/products' element={<Products />} />
-          <Route path='/packages' element={<Packages />} />
+          <Route element={<WithProducts />}>
+            <Route path='/' element={<Banner />} />
+          </Route>
+          <Route element={<WithoutProducts />}>
+            <Route path='/register' element={<Register />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/bestselling' element={<Bestselling />} />
+            <Route path='/packages' element={<Packages />} />
+            <Route path='/products' element={<Products />} />
+          </Route>
           <Route path='/notfound' element={<ErrorPage />} />
           <Route path='/*' element={<Navigate to='/notfound'/>} />
         </Routes>
-        <Products />
       </Provider>
     </div>
   );

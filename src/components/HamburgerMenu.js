@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import {Icon} from 'react-icons-kit';
+import {user} from 'react-icons-kit/fa/user';
 import {menu} from 'react-icons-kit/icomoon';
 import {times} from 'react-icons-kit/fa/times'
 import {cart} from 'react-icons-kit/icomoon';

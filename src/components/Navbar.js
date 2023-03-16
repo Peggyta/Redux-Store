@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import logo from '../images/logo.jpg';
 import {Icon} from 'react-icons-kit';
 import {home2} from 'react-icons-kit/icomoon';
-import {cart} from 'react-icons-kit/icomoon';
+import {ic_shopping_cart} from 'react-icons-kit/md/ic_shopping_cart'
 import {search} from 'react-icons-kit/icomoon';
 
 const Navbar = () => {
@@ -21,7 +21,7 @@ const Navbar = () => {
                 <ul className='hidden md:block md:flex md:items-center md:justify-center text-grey'>
                     <li className='md:px-10 sm:px-4'>
                         <Link to='#'>
-                            <Icon icon={cart} size={22} className='text-rosewood' /> Cart
+                            <Icon icon={ic_shopping_cart} size={28} className='text-rosewood' /> Cart
                         </Link>
                         <span>{state.itemsCounter}</span>
                     </li>

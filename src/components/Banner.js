@@ -30,13 +30,6 @@ const Banner = () => {
     }
       
     useEffect (()=> {
-        // axios.get('https://fakestoreapi.com/products/7')
-        // .then((response)=> {
-        // setBanner(response.data)
-        // })
-        // .catch((error)=> {
-        //     console.log(error);
-        // })
         displayBanner();
     },[]);
 

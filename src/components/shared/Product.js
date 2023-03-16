@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import Icon from 'react-icons-kit';
+import {bin} from 'react-icons-kit/icomoon/bin';
 //actions :
 import {addItem, removeItem, increase, decrease} from '../../redux/cart/cartAction';
 //function :
@@ -22,7 +23,7 @@ const Product = ({productData}) => {
                 </div>
                 <div>
                     {numberOfItems(state, productData.id)===1 &&
-                    <button onClick={()=> dispatch(removeItem(productData))}><Icon /></button>}
+                    <button onClick={()=> dispatch(removeItem(productData))}><Icon icon={bin} /></button>}
                     {numberOfItems(state, productData.id) > 1 &&
                     <button onClick={()=> dispatch(decrease(productData))}>-</button>}
 

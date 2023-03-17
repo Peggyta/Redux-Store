@@ -20,10 +20,12 @@ const Navbar = () => {
                 </div>
                 <ul className='hidden md:block md:flex md:items-center md:justify-center text-grey'>
                     <li className='md:px-10 sm:px-4'>
+                    <div className='relative'>
                         <Link to='#'>
+                            <span className='item-counter absolute -left-2 -bottom-1 bg-cherry rounded-full text-lightblue text-sm font-bold'>{state.itemsCounter}</span>
                             <Icon icon={ic_shopping_cart} size={28} className='text-rosewood' /> Cart
-                        </Link>
-                        <span>{state.itemsCounter}</span>
+                        </Link> 
+                    </div>    
                     </li>
                     <li>
                         <Link to='/register' className='buttons md:bg-lightblue px-4 py-1'>Register</Link>

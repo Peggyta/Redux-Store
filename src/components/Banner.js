@@ -2,8 +2,8 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import arrow from '../images/arrow.jpg';
 import ring from '../images/ring.jpg';
-import spinner from '../images/spinner.gif';
 import Icon from 'react-icons-kit';
+import {spinner4} from 'react-icons-kit/icomoon/spinner4';
 import {truck} from 'react-icons-kit/fa/truck';
 import {checkSquareO} from 'react-icons-kit/fa/checkSquareO';
 import {dollar} from 'react-icons-kit/fa/dollar';
@@ -37,7 +37,9 @@ const Banner = () => {
         <div className='hidden md:block'>
             <div className='mx-auto mt-6 w-1/6'>
                 {loading? <img src={banner.image} alt='banner' /> : 
-                <img className='w-2/4 mx-auto' src={spinner} alt='loading' />}    
+                <div className='mx-auto md:flex md:justify-center mb-6' >
+                    <Icon className='md:animate-spin' icon={spinner4} size={35} />
+                </div>}   
             </div>
             <div className='md:flex md:justify-center md:w-2/4 mx-auto relative '>
                 <input className='w-screen bg-lightblue pb-4 pt-3 rounded-md placeholder-style' placeholder='what are you looking for?' />

@@ -1,5 +1,6 @@
 import React from 'react';
 import Icon from 'react-icons-kit';
+import { bin } from 'react-icons-kit/icomoon';
 import { useDispatch } from 'react-redux';
 //actions
 import { increase, decrease, removeItem } from '../../redux/cart/cartAction';
@@ -20,7 +21,7 @@ const Cart = (props) => {
             {
                 quantity > 1 ?
                 <button onClick={()=>dispatch(decrease(props.data))}>-</button> :
-                <button onClick={()=> dispatch(removeItem(props.data))}><Icon icon={trash} /></button>
+                <button onClick={()=> dispatch(removeItem(props.data))}><Icon icon={bin} /></button>
             }
             <button onClick={()=> dispatch(increase(props.data))} >+</button>
         </div>

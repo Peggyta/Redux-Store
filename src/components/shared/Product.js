@@ -12,13 +12,13 @@ const Product = ({productData}) => {
     const dispatch = useDispatch();
     const state = useSelector(state => state.cartState);
     return (
-        <div className='flex flex-col items-center border border-cement rounded-xl px-6 py-4 h-4/12 my-6'>
+        <div className='flex flex-col items-center py-3 px-4 md:w-auto my-4 border rounded-2xl border-cement md:px-6 sm:px-10'>
             <img className='w-32 h-32' src={productData.image} alt='product' />
             <h3 className='font-bold'>{itemsTitle(productData.title)}</h3>
             <p>{productData.rate}</p>
             <p className=' text-cherry font-normal line-through'>Price: {productData.price} $</p>
             <p className='mb-2 text-grass font-bold'>Price: {productData.price} $</p>
-            <div className='flex justify-between w-40'>
+            <div className='flex justify-between w-40 gap-2  items-center'>
                 <div>
                     <Link className='text-sm'>Details</Link>
                 </div>

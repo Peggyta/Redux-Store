@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import logo from '../images/logo.jpg';
 import {Icon} from 'react-icons-kit';
 import {home2} from 'react-icons-kit/icomoon';
-import {ic_shopping_cart} from 'react-icons-kit/md/ic_shopping_cart'
+import {ic_shopping_cart} from 'react-icons-kit/md/ic_shopping_cart';
 import {search} from 'react-icons-kit/icomoon';
 
 const Navbar = () => {

@@ -17,7 +17,7 @@ const Product = ({productData}) => {
             <h3 className='font-bold'>{itemsTitle(productData.title)}</h3>
             <p>{productData.rate}</p>
             <p className=' text-cherry font-normal line-through'>Price: {productData.price} $</p>
-            <p className='mb-2 text-grass font-bold'>Price: {productData.price} $</p>
+            <p className='mb-2 text-grass font-bold'>Price: {(productData.price*0.8).toFixed(2)} $</p>
             <div className='flex justify-between w-40 gap-2  items-center'>
                 <div>
                     <Link className='text-sm'>Details</Link>

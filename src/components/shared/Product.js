@@ -16,20 +16,20 @@ const Product = ({productData}) => {
             <img className='w-32 h-32' src={productData.image} alt='product' />
             <h3 className='font-bold'>{itemsTitle(productData.title)}</h3>
             <p>{productData.rate}</p>
-            <p className=' text-cherry font-normal line-through'>Price: {productData.price} $</p>
+            <p className='no-off-price'>Price: {productData.price} $</p>
             <p className='mb-2 text-grass font-bold'>Price: {(productData.price*0.8).toFixed(2)} $</p>
             <div className='flex justify-between w-40 gap-2  items-center'>
                 <div>
-                    <Link className='text-sm'>Details</Link>
+                    <Link to={`/products/${productData.id}`} className='text-sm'>Details</Link>
                 </div>
                 <div>
                     {numberOfItems(state, productData.id)===1 &&
                     <button className='bg-cement px-2 py-1 rounded-md text-center leading-normal hover:bg-grey transition transition-all delay-75' onClick={()=> dispatch(removeItem(productData))}><Icon className='leading-normal pl-0.75px hover:text-lightblue' icon={bin} size={18} /></button>}
                     {numberOfItems(state, productData.id) > 1 &&
-                    <button className='bg-cherry px-3 py-1.5px rounded-md text-xl font-bold ml-2 text-lightblue text-center hover:bg-sakura transition transition-all delay-75 ease-in' onClick={()=> dispatch(decrease(productData))}>-</button>}
+                    <button className='add-remove-buttons px-3' onClick={()=> dispatch(decrease(productData))}>-</button>}
                     {numberOfItems(state, productData.id)> 0 && <span className='pl-2 font-bold'>{numberOfItems(state,productData.id)}</span>}
                     {isInCart(state, productData.id) ? 
-                    <button className='bg-cherry px-2 py-1.5px rounded-md text-xl font-bold ml-2 text-lightblue text-center hover:bg-sakura transition transition-all delay-75 ease-in' onClick={()=> dispatch(increase(productData))}>+</button> : 
+                    <button className='add-remove-buttons px-2' onClick={()=> dispatch(increase(productData))}>+</button> : 
                     <button className='bg-rosewood rounded-md font-bold text-sm px-3 py-1 hover:bg-cream' onClick={()=> dispatch(addItem(productData))}>Add to cart</button>}
                 </div>
             </div>  

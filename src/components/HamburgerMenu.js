@@ -28,7 +28,7 @@ const HamburgerMenu = () => {
                         </button>
                     <div>
                         <div className='relative'>
-                            <input className='pl-8 bg-lightblue rounded-md' type='text' placeholder='search...'/>
+                            <input className='pl-8 w-36 sm:w-auto bg-lightblue rounded-md ' type='text' placeholder='search...'/>
                             <span className='absolute left-2 -top-1.5px'><Icon icon={search} size={18} /></span>
                         </div>      
                     </div>

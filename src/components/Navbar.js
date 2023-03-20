@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import '../styles/Navbar.css';
 import { Link } from 'react-router-dom';
-import logo from '../images/logo.jpg';
+import logo from '../images/logo.png';
 import {Icon} from 'react-icons-kit';
 import {home2} from 'react-icons-kit/icomoon';
 import {ic_shopping_cart} from 'react-icons-kit/md/ic_shopping_cart';

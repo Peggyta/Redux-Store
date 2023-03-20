@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+//icons :
 import Icon from 'react-icons-kit';
-import {bin} from 'react-icons-kit/icomoon/bin';
+import {ic_delete_twotone} from 'react-icons-kit/md/ic_delete_twotone';
 //actions :
 import {addItem, removeItem, increase, decrease} from '../../redux/cart/cartAction';
 //function :
@@ -15,7 +16,6 @@ const Product = ({productData}) => {
         <div className='flex flex-col items-center py-3 px-4 md:w-auto my-4 border rounded-2xl border-cement md:px-6 sm:px-10'>
             <img className='w-32 h-32' src={productData.image} alt='product' />
             <h3 className='font-bold'>{itemsTitle(productData.title)}</h3>
-            <p>{productData.rate}</p>
             <p className='no-off-price'>Price: {productData.price} $</p>
             <p className='mb-2 text-grass font-bold'>Price: {(productData.price*0.8).toFixed(2)} $</p>
             <div className='flex justify-between w-40 gap-2  items-center'>
@@ -24,7 +24,7 @@ const Product = ({productData}) => {
                 </div>
                 <div>
                     {numberOfItems(state, productData.id)===1 &&
-                    <button className='bg-cement px-2 py-1 rounded-md text-center leading-normal hover:bg-grey transition transition-all delay-75' onClick={()=> dispatch(removeItem(productData))}><Icon className='leading-normal pl-0.75px hover:text-lightblue' icon={bin} size={18} /></button>}
+                    <button className='bg-cement px-1 pb-0.75px pt-1 rounded-md text-center leading-normal hover:bg-grey transition transition-all delay-75' onClick={()=> dispatch(removeItem(productData))}><Icon className='leading-normal pl-0.75px hover:text-lightblue' icon={ic_delete_twotone} size={24} /></button>}
                     {numberOfItems(state, productData.id) > 1 &&
                     <button className='add-remove-buttons px-3' onClick={()=> dispatch(decrease(productData))}>-</button>}
                     {numberOfItems(state, productData.id)> 0 && <span className='pl-2 font-bold'>{numberOfItems(state,productData.id)}</span>}

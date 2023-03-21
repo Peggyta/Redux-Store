@@ -4,39 +4,56 @@ import { Link } from 'react-router-dom';
 //action
 import { checkout, clear } from '../redux/cart/cartAction';
 import { useDispatch, useSelector } from 'react-redux';
+import Icon from 'react-icons-kit';
+import {neutral} from 'react-icons-kit/icomoon/neutral';
+import {checkmark} from 'react-icons-kit/icomoon/checkmark';
 
 
 const ShopCart = () => {
     const dispatch = useDispatch();
-    const state = useSelector(state => state.cartState)
+    const state = useSelector(state => state.cartState);
     return (
         <div>
+            <h3 className='text-center font-bold text-xl mt-6 mb-4'>Shopping Cart</h3>
             <div>
                 {state.selectedItem.map(item => <Cart key={item.id} data={item} />)}
             </div>
             {
                 state.itemsCounter > 0 && 
-                <div>
-                    <p><span>Total Items:</span>{state.itemsCounter}</p>
-                    <p><span>Total Price:</span>{state.total}</p>
-               </div>
+                    <div className='flex flex-col md:mx-auto sm:mx-auto items-center rounded-xl my-2 py-3 md:w-1/2 sm:w-4/6 w-6/6 mx-4 bg-rosewood'>
+                        <div className='font-semibold'>
+                            <p><span>Total Items: </span>{state.itemsCounter}</p>
+                            <p><span>Total Price: </span>{state.total} $</p>
+                        </div>
+                        <div className='flex w-full gap-6 justify-center my-2'>
+                            <button className='bg-cement px-6 py-1 rounded-lg hover:bg-grey ' onClick={()=>dispatch(clear())}>Clear</button>
+                            <button className='bg-cherry px-3 rounded-lg font-semibold text-lightblue hover:bg-sakura' onClick={()=> dispatch(checkout())}>Checkout</button>
+                        </div>  
+                    </div>
             }
-            <div>
-                <button onClick={()=>dispatch(clear())}>Clear</button>
-                <button onClick={()=> dispatch(checkout())}>Checkout</button>
-            </div>
+            
             {
-                state.checkout && 
-                <div>
-                    <h3>Thanks for buying!</h3>
-                    <Link to='/products'>Back to shop</Link>
+                !state.checkout && state.itemsCounter === 0 &&
+                <div className='flex mt-6 justify-center items-center flex-col gap-3'>
+                    <div>
+                        <Icon icon={neutral} size={100} />
+                    </div>
+                    <div className='text-center'>
+                        <p className='pb-4'>Your shopping cart is empty!</p>
+                        <Link className='bg-cherry transition delay-75 hover:bg-sakura px-4 py-2 font-semibold text-lightblue rounded-lg' to='/products'>Back to shop</Link>
+                    </div>
                 </div>
             }
             {
-                !state.checkout && state.itemsCounter === 0 &&
-                <div>
-                   <h3>Need something to buy?</h3> 
-                   <Link to='/products'>Go to shop</Link>
+                state.checkout && 
+                <div className='flex justify-center flex-col items-center mt-6'>
+                    <div className='flex gap-2 text-grass'>
+                        <Icon className='animate-pulse' icon={checkmark} />
+                        <h3 className='font-bold text-lg mb-4'>Thanks for buying!</h3>
+                    </div>
+                    <div>
+                        <Link className='bg-cherry transition delay-75 hover:bg-sakura px-4 py-2 font-semibold text-lightblue rounded-lg' to='/products'>Back to shop</Link>
+                    </div>      
                 </div>
             }
         </div>

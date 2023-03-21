@@ -24,7 +24,7 @@ const Products = () => {
           {
             productsState.loading ? productsState.products.slice(0,loadMore).map 
             (loading => <Loader key={loading.id} loadData={loading} />) :  
-            productsState.error ? <h2>an error occurred!</h2> :
+            productsState.error ? <h2 className='font-bold'>an error occurred!</h2> :
             productsState.products.slice(0, loadMore).map (product => <Product key={product.id}
             productData={product} />)
           }

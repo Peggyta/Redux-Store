@@ -9,10 +9,11 @@ import {ic_shopping_cart} from 'react-icons-kit/md/ic_shopping_cart';
 import {search} from 'react-icons-kit/icomoon';
 
 const Navbar = () => {
+     // calling our state from the reduxer using useSelector hook of redux
     const state = useSelector(state => state.cartState);
     return (
-        <div className='max-w-full'>
-            <header className='mt-12'>
+        <header className='max-w-full'>
+            <div className='mt-12'>
                 <div className='flex items-center justify-center mb-3'>
                     <Link to='/'>
                         <img className='w-32' src={logo} alt='logo' />
@@ -51,8 +52,8 @@ const Navbar = () => {
                         <Link to='/'><Icon icon={home2} size={22} /></Link>
                     </li>
                 </ul>
-            </header>
-        </div>
+            </div>
+        </header>
     );
 };
 

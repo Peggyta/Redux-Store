@@ -8,6 +8,7 @@ import Icon from 'react-icons-kit';
 import {ic_delete_twotone} from 'react-icons-kit/md/ic_delete_twotone';
 
 const Slide = ({productData}) => {
+     // calling our state from the reduxer using useSelector hook of redux
     const state = useSelector(state => state.cartState);
     const dispatch = useDispatch();
     return (
@@ -35,7 +36,7 @@ const Slide = ({productData}) => {
                     {
                         isInCart(state, productData.id) ? 
                     <button className='add-remove-buttons px-2' onClick={()=>dispatch(increase(productData))}>+</button>:
-                    <button className='bg-cherry py-2 w-full text-center font-semibold text-lightblue rounded-lg' onClick={()=> dispatch(addItem(productData))}>Add to cart</button>
+                    <button className='bg-cherry py-2 w-full text-center font-semibold text-lightblue rounded-lg hover:bg-sakura' onClick={()=> dispatch(addItem(productData))}>Add to cart</button>
                     }
                 </div>
             </div>

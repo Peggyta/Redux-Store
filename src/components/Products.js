@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Product from './shared/Product';
 import Loader from './shared/Loader';
 import '../styles/Navbar.css';
+
 const Products = () => {
   const [loadMore, setLoadMore] = useState(8);
   const dispatch = useDispatch();
@@ -24,7 +25,7 @@ const Products = () => {
           {
             productsState.loading ? productsState.products.slice(0,loadMore).map 
             (loading => <Loader key={loading.id} loadData={loading} />) :  
-            productsState.error ? <h2 className='font-bold'>an error occurred!</h2> :
+            productsState.error ? <h2 className='font-bold text-center'>an error occurred!</h2> :
             productsState.products.slice(0, loadMore).map (product => <Product key={product.id}
             productData={product} />)
           }

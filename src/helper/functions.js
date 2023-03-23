@@ -1,5 +1,5 @@
 const itemsTitle = title => { //Titles of products were too long...
-    const splitedTitle = title.split("");
+    const splitedTitle = title.split(" ");
     const newTitle = `${splitedTitle[0]} ${splitedTitle[1]}`
     return newTitle;
 }

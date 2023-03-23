@@ -15,12 +15,12 @@
     border-radius: 20px;
     right: 0;
     width: 200px;
-    padding-inline: 20px;
-    padding-bottom: 7px;
+    height: 100vh;
+    padding-inline: 40px;
     text-align: left;
     z-index: 1;
     background-color: white;
-    transform: translate(-10px);
+    transform: translate(14px);
     transition: all .2s ease-in;
 }
 
@@ -30,4 +30,28 @@
 
 .no-menu ul {
     display: none;
+}
+
+.item-counter {
+    padding: 0  6px;
+    
+}
+
+.show-login-box {
+    position: absolute;
+    top:32px;
+    left: 44px;
+    width: 100px;
+    padding: 10px 14px;
+    border: 1px solid #cccdcf;
+    border-radius: 10px;
+    background: white;
+}
+
+.hide-login-box {
+    display:none;
+}
+
+@media (min-width:768px){
+    display:none;
 }

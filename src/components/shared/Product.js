@@ -10,7 +10,9 @@ import {addItem, removeItem, increase, decrease} from '../../redux/cart/cartActi
 import { itemsTitle, numberOfItems, isInCart } from '../../helper/functions';
 
 const Product = ({productData}) => {
+    
     const dispatch = useDispatch();
+     // calling our state from the reduxer using useSelector hook of redux
     const state = useSelector(state => state.cartState);
     return (
         <div className='flex flex-col items-center py-3 px-4 md:w-auto my-4 border rounded-2xl border-cement md:px-6 sm:px-10'>

@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import arrow from '../images/arrow.jpg';
-import ring from '../images/ring.jpg';
+import arrow from '../images/arrow.png';
+import ring from '../images/ring.png';
 import Icon from 'react-icons-kit';
 import {spinner4} from 'react-icons-kit/icomoon/spinner4';
 import {truck} from 'react-icons-kit/fa/truck';
@@ -9,13 +9,13 @@ import {checkSquareO} from 'react-icons-kit/fa/checkSquareO';
 import {dollar} from 'react-icons-kit/fa/dollar';
 import {headphones} from 'react-icons-kit/iconic/headphones';
 
-
 const Banner = () => {
     const[banner, setBanner] = useState([]);
     const[loading, setLoading] = useState(false);
-
+    const [search, setSearch] = useState("");
+    
     const displayBanner = async () => {
-        try {
+        try { //fetch a single product from api
             const data = await axios
             .get('https://fakestoreapi.com/products/7')
             .then((response) => {
@@ -28,13 +28,19 @@ const Banner = () => {
             console.log(error)
         };
     }
+
       
     useEffect (()=> {
         displayBanner();
     },[]);
 
+    const searchHandler = event => {
+        setSearch(event.target.value)
+    };
+
+
     return (
-        <div className='hidden md:block'>
+        <section className='hidden md:block'>
             <div className='mx-auto mt-6 w-1/6'>
                 {loading? <img src={banner.image} alt='banner' /> : 
                 <div className='mx-auto md:flex md:justify-center mb-6' >
@@ -42,7 +48,9 @@ const Banner = () => {
                 </div>}   
             </div>
             <div className='md:flex md:justify-center md:w-2/4 mx-auto relative '>
-                <input className='w-screen bg-lightblue pb-4 pt-3 rounded-md placeholder-style' placeholder='what are you looking for?' />
+                <input value={search} className='w-screen bg-lightblue focus:outline-none focus:pl-28 focus:ring 
+                focus:ring-grey pb-4 pt-3 rounded-md placeholder-style' 
+                onChange={searchHandler} placeholder='what are you looking for?' />
                 <div className='absolute left-10 top-2'>
                     <p className='font-bold text-xl'>Search:</p>
                 </div>
@@ -63,7 +71,7 @@ const Banner = () => {
                     <div className='text-grey'><Icon icon={headphones} size={38} /></div>
                     <div className='text-grey'><Icon icon={checkSquareO} size={38} /></div>
             </div>
-        </div>
+        </section>
     );
 };
 

@@ -43,12 +43,6 @@ const HamburgerMenu = () => {
                                 <Link to='/'>Home</Link>
                             </li>
                             <li className='py-4'>
-                                <Link to='#'>Login</Link>
-                            </li>
-                            <li className='py-4'>
-                                <Link to='#'>Register</Link>
-                            </li>
-                            <li className='py-4'>
                                 <Link to='#'>Packages</Link>
                             </li>
                             <li className='py-4'>
@@ -60,8 +54,8 @@ const HamburgerMenu = () => {
             </div>
             <div className={open ? 'show-login-box': 'hide-login-box'}>
                 <ul>
-                    <Link><li>Register</li></Link>
-                    <Link><li>Login</li></Link>
+                    <Link to='/register'><li>Register</li></Link>
+                    <Link to='/login'><li>Login</li></Link>
                 </ul>
             </div>
         </div>

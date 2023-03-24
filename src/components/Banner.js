@@ -48,7 +48,7 @@ const Banner = () => {
                 </div>}   
             </div>
             <div className='md:flex md:justify-center md:w-2/4 mx-auto relative '>
-                <input value={search} className='w-screen bg-lightblue focus:outline-none focus:pl-28 focus:ring 
+                <input value={search} className='w-screen bg-lightblue focus:outline-none px-28 focus:ring 
                 focus:ring-grey pb-4 pt-3 rounded-md placeholder-style' 
                 onChange={searchHandler} placeholder='what are you looking for?' />
                 <div className='absolute left-10 top-2'>

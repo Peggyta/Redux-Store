@@ -29,10 +29,10 @@ const Navbar = () => {
                     </div>    
                     </li>
                     <li>
-                        <Link to='/register' className='buttons md:bg-lightblue px-4 py-1'>Register</Link>
+                        <Link to='/register' className='buttons nav-buttons px-4'>Register</Link>
                     </li>
                     <li className='mx-1'>
-                        <Link to='/login' className='buttons md:bg-lightblue px-6 py-1'>Login</Link>
+                        <Link to='/login' className='buttons nav-buttons px-6 '>Login</Link>
                     </li>
                     <li className='mx-16'>
                         <Link to='#'>

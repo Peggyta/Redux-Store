@@ -20,7 +20,7 @@ function App() {
   };
   useEffect(() => {
     //changing color of body with darkmode
-    document.body.style.backgroundColor = isdarkMode ? "#292c35" : "#fff";
+    document.body.style.backgroundColor = isdarkMode ? "#1c1e2a" : "#fff";
     document.body.style.color = isdarkMode ? "#996515" : "#000";
   }, [isdarkMode]);
 

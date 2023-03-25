@@ -1,7 +1,6 @@
 const initialState = {
     selectedItem: [],
     itemsCounter: 0,
-    discountedPrice: []*0.8,
     total: 0,
     checkout: false
 }

@@ -19,7 +19,7 @@ const Navbar = () => {
                         <img className='w-32' src={logo} alt='logo' />
                     </Link>
                 </div>
-                <ul className='hidden md:block md:flex md:items-center md:justify-center text-grey'>
+                <ul className='hidden md:block md:flex md:items-center md:justify-center text-grey mb-12'>
                     <li className='md:px-10 sm:px-4'>
                     <div className='relative'>
                         <Link to='/cart'>

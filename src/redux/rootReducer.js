@@ -6,7 +6,7 @@ import darkModeReducer from "./mode/darkModeReducer";
 const rootReducer = combineReducers({
     productsState: productsReducer,
     cartState: cartReducer,
-    darkMode: darkModeReducer
+    darkMode: darkModeReducer,
 });
 
 export default rootReducer;

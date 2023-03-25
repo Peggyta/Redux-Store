@@ -9,7 +9,7 @@ const Slider = () => {
     
     return (
         <div className='hidden md:block lg:block md:w-1/2 lg:w-1/2 mx-auto'>
-            <Carousel autoPlay infiniteLoop interval={4000} showArrows showStatus={false} >
+            <Carousel autoPlay infiniteLoop interval={4000} showArrows showStatus={false} showThumbs={false} >
                 {productsState.products.slice(0,5).map(items=> <Slide key={items.id} productData={items}/>)}
             </Carousel>
         </div>

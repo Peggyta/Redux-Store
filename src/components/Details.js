@@ -50,7 +50,7 @@ const Details = () => {
         </div>
          <div className='mx-auto md:flex md:justify-center flex-col w-3/4 md:w-4/6 mb-6'>
             <h3 className='font-bold text-xl mb-3'>Comments</h3>
-            {comments.map(items => <div className='border-b pt-1 pb-2 border-cement ' key={items.id}>
+            {comments.map(items => <div className='border-b pt-1 pb-2 border-cement' key={items.id}>
                 <p className='font-semibold pl-1 text-grey pb-2'>{items.email}</p>
                 <p className='pl-4'>{items.body}</p></div>)}
      </div>

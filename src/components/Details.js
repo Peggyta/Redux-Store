@@ -4,9 +4,8 @@ import Icon from 'react-icons-kit';
 import {coinDollar} from 'react-icons-kit/icomoon/coinDollar';
 import {undo2} from 'react-icons-kit/icomoon/undo2';
 import {ic_star} from 'react-icons-kit/md/ic_star';
-
 import { Link, useParams } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector} from 'react-redux';
 import { getComments } from '../api/comments';
 
 

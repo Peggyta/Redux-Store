@@ -31,7 +31,7 @@ function App() {
         checked={isdarkMode} onChange={switchDarkMode} />
         <label htmlFor="checkbox" className="label">
           <Icon className="text-lightblue pb-1 animate-pulse" icon={moonO} />
-          <Icon className="text-yellow pb-1 animate-spin" icon={sunO} />
+          <Icon className="text-yellow pb-1 animate-pulse" icon={sunO} />
           <div className="ball"></div>
         </label>
       </div>

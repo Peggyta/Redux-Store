@@ -42,7 +42,7 @@ const HamburgerMenu = () => {
             <div className='md:hidden flex justify-between items-center px-10'>
                 <div className='flex flex-row gap-3'>
                     <div className='relative'>
-                        <Link>
+                        <Link to='/cart'>
                             <span className='item-counter absolute -left-2 -bottom-1 bg-cherry rounded-full text-lightblue text-sm font-bold'>{state.itemsCounter}</span>
                             <Icon className='text-rosewood' icon={ic_shopping_cart} size={30} />
                         </Link>  
@@ -67,10 +67,13 @@ const HamburgerMenu = () => {
                                 <Link to='/'>Home</Link>
                             </li>
                             <li className='py-4'>
-                                <Link to='#'>Packages</Link>
+                                <Link to='/products'>Products</Link>
                             </li>
                             <li className='py-4'>
-                                <Link to='#'>Bestselling</Link>
+                                <Link to='/packages'>Packages</Link>
+                            </li>
+                            <li className='py-4'>
+                                <Link to='/bestselling'>Bestselling</Link>
                             </li>
                         </ul>
                     </div>
@@ -82,7 +85,7 @@ const HamburgerMenu = () => {
                     <Link to='/login'><li>Login</li></Link>
                 </ul>
             </div>
-            <div className='lg:hidden md:hidden grid col-auto place-items-center grid-col-1 mt-32 sm:grid-cols-2 sm:mx-16 '>
+            {/* <div className='lg:hidden md:hidden grid col-auto place-items-center grid-col-1 mt-32 sm:grid-cols-2 sm:mx-16 '>
           {
             productsState.loading ? productsState.products.slice(0,loadMore).map 
             (loading => <Loader key={loading.id} loadData={loading} />) :  
@@ -90,10 +93,10 @@ const HamburgerMenu = () => {
             searchProduct.slice(0, loadMore).map (product => <Product key={product.id}
             productData={product} />)
           }
-        </div>
-        <div className='lg:hidden md:hidden flex justify-center mt-4 mb-6'>
+        </div> */}
+        {/* <div className='lg:hidden md:hidden flex justify-center mt-4 mb-6'>
           <button className='bg-cherry px-12 py-2 hover:bg-sakura rounded-md text-lightblue font-bold' onClick={loadHandler}>Load more</button>
-        </div>
+        </div> */}
         </div>
     );
 };

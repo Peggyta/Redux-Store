@@ -2,8 +2,9 @@ import React from 'react';
 
 const Bestselling = () => {
     return (
-        <div>
-            best
+        <div className='text-center mt-6'>
+          <h3 className='text-xl font-bold'>Bestselling</h3> 
+          <p>Website under construction!</p> 
         </div>
     );
 };

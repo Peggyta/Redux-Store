@@ -24,9 +24,9 @@ const Footer = () => {
                     velit esse cillum dolore eu
                     </p>
                 </div>
-                <div className='flex justify-between lg:w-1/2 md:w-2/4 md:pt-6 mx-auto lg:pt-6 w-4/6 pt-4'>
+                <div className='flex flex-col items-center lg:flex-row md:flex-row justify-between lg:w-1/2 md:w-2/4 md:pt-6 mx-auto lg:pt-6 w-4/6 pt-4'>
                     <div>
-                        <p>Phone Number: <span className='text-lightblue'>00-12345678</span></p>
+                        <p className='mb-3 md:mb-0 lg:mb-0'>Phone Number: <span className='text-lightblue'>00-12345678</span></p>
                     </div>
                     <div className='flex gap-6 cursor-pointer'>
                         <Icon icon={facebook} size={22} />

@@ -12,14 +12,14 @@ const Slide = ({productData}) => {
     const state = useSelector(state => state.cartState);
     const dispatch = useDispatch();
     return (
-        <div className='flex border-2 gap-10 border-grey px-10 py-16 rounded-xl bg-blue'>
+        <div className='flex border-2 gap-10 border-grey px-10 py-16 rounded-xl bg-gradient-to-t from-grey to-blue'>
             <div className='w-56 h-56'>
                 <img className='h-full' src={productData.image} alt='product' />
             </div>
             <div className='text-left'>
                 <h3 className='font-bold mb-3'>{productData.title}</h3>
                 <p className='no-off-price'>Price: {productData.price} $</p>
-                <p className='mb-2 text-grass font-bold'>Price: {(productData.price*0.8).toFixed(2)} $</p>
+                <p className='mb-2 text-green font-bold'>Price: {(productData.price*0.8).toFixed(2)} $</p>
                 <div className='flex justify-between w-40 gap-2 font-semibold  items-center'>
                     <Link to={`/products/${productData.id}`} className='text-normal px-2 rounded-md bg-lightblue'>Details</Link>
                 </div>

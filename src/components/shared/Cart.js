@@ -17,25 +17,26 @@ const Cart = (props) => {
                     <h3 className='font-bold text-grey'>{itemsTitle(title)}</h3>
                 </div>
                 <div > 
-                        <p className='font-semibold text-grass'>{price} $</p>
+                    <p className='no-off-price'>Price: {price} $</p>
+                    <p className='mb-2 text-grass font-bold'>Price: {(price*0.8).toFixed(2)} $</p>
                 </div>
                 <div className='flex items-center'>
                         <div>
                            <p className='font-semibold'>{quantity}</p> 
                         </div>
                         <div className='flex flex-col'>
-                            <div>
-                                <button className='add-remove-buttons px-2 mb-1 rounded-xl' onClick={()=> dispatch(increase(props.data))} >+</button>
-                            </div>
-                            <div>
-                                {
-                                    quantity > 1 ?
-                                    <button className='add-remove-buttons px-3 rounded-xl'  onClick={()=>dispatch(decrease(props.data))}>-</button> :
-                                    <button className='bg-cement px-1 ml-2 py-0.75px rounded-xl text-center leading-normal hover:bg-grey transition transition-all delay-75' onClick={()=> dispatch(removeItem(props.data))}><Icon className='leading-normal hover:text-lightblue' icon={ic_delete_twotone} size={24} /></button>
-                                }
-                            </div>  
+                        <div>
+                            <button className='add-remove-buttons px-2 mb-1 rounded-xl' onClick={()=> dispatch(increase(props.data))} >+</button>
                         </div>
+                        <div>
+                            {
+                                quantity > 1 ?
+                                <button className='add-remove-buttons px-3 rounded-xl'  onClick={()=>dispatch(decrease(props.data))}>-</button> :
+                                <button className='bg-cement px-1 ml-2 py-0.75px rounded-xl text-center leading-normal hover:bg-grey transition transition-all delay-75' onClick={()=> dispatch(removeItem(props.data))}><Icon className='leading-normal hover:text-lightblue' icon={ic_delete_twotone} size={24} /></button>
+                            }
+                        </div>  
                     </div>
+                </div>
             </div> 
         </div>
     );

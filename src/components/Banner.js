@@ -67,7 +67,7 @@ const Banner = () => {
                     <Icon className='md:animate-spin' icon={spinner4} size={35} />
                 </div>}   
             </div>
-            <div className='md:flex md:flex-col md:justify-center md:items-center md:w-2/4 mx-auto relative '>
+            <div className='md:flex md:flex-col md:justify-center md:items-center md:w-2/4 mx-auto relative'>
                 <div>
                 <input value={search} className=' bg-lightblue focus:outline-none px-64 focus:ring 
                 focus:ring-grey pb-4 pt-3 rounded-md placeholder-style' 

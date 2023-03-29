@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import '../styles/Navbar.css';
 import { Link } from 'react-router-dom';
@@ -9,8 +9,15 @@ import {ic_shopping_cart} from 'react-icons-kit/md/ic_shopping_cart';
 import {search} from 'react-icons-kit/icomoon';
 
 const Navbar = () => {
+    const [click, setClick] = useState(true);
      // calling our state from the reduxer using useSelector hook of redux
     const state = useSelector(state => state.cartState);
+    const clickHandler = () => {
+        setClick(!click);
+    }
+    const changeHandler = event => {
+        setClick(event.target.value);
+    };
     return (
         <header className='max-w-full'>
             <div className='mt-12'>
@@ -34,11 +41,10 @@ const Navbar = () => {
                     <li className='mx-1'>
                         <Link to='/login' className='buttons nav-buttons px-6 '>Login</Link>
                     </li>
-                    <li className='mx-16'>
-                        <Link to='#'>
-                            <Icon icon={search} size={22} />
-                        </Link>
-                    </li>
+                        <div className='mx-16 relative cursor-pointer' onClick={clickHandler}>
+                            <input className={!click ? 'magnifier': 'default-icon'} onChange={changeHandler}  />
+                            <div className='absolute top-2 left-3'><Icon icon={search} size={22} /></div>
+                        </div>
                     <li className='mx-3'>
                         <Link to='/bestselling'>Bestselling</Link>
                     </li>

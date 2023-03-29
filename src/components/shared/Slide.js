@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { isInCart, numberOfItems } from '../../helper/functions';
+import { isInCart, numberOfItems, searchTitle } from '../../helper/functions';
 import {addItem, removeItem, increase, decrease} from '../../redux/cart/cartAction';
 //icons :
 import Icon from 'react-icons-kit';
@@ -12,12 +12,13 @@ const Slide = ({productData}) => {
     const state = useSelector(state => state.cartState);
     const dispatch = useDispatch();
     return (
-        <div className='flex border-2 gap-10 border-grey px-10 py-16 rounded-xl bg-gradient-to-t from-grey to-blue'>
-            <div className='w-56 h-56'>
+        <div className='flex flex-col md:flex-row lg:flex-row border-2 gap-10 border-grey px-10 
+        lg:py-16 md:py-16 py-6 rounded-xl bg-gradient-to-t from-grey to-blue lg:h-full h-500px '>
+            <div className='lg:w-56 lg:h-56 md:w-56 md:h-56 w-40 h-40 mx-auto lg:mx-0 md:mx-0 lg:px-4 md:px-4'>
                 <img className='h-full' src={productData.image} alt='product' />
             </div>
             <div className='text-left'>
-                <h3 className='font-bold mb-3'>{productData.title}</h3>
+                <h3 className='font-bold mb-3'>{searchTitle(productData.title)}</h3>
                 <p className='no-off-price'>Price: {productData.price} $</p>
                 <p className='mb-2 text-green font-bold'>Price: {(productData.price*0.8).toFixed(2)} $</p>
                 <div className='flex justify-between w-40 gap-2 font-semibold  items-center'>

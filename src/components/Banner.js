@@ -69,7 +69,7 @@ const Banner = () => {
             </div>
             <div className='md:flex md:flex-col md:justify-center md:items-center md:w-2/4 mx-auto relative'>
                 <div>
-                <input value={search} className=' bg-lightblue focus:outline-none px-64 focus:ring 
+                <input value={search} className=' bg-lightblue focus:outline-none max-w-5xl lg:px-64 md:px-36 focus:ring 
                 focus:ring-grey pb-4 pt-3 rounded-md placeholder-style' 
                 onChange={searchHandler} placeholder='what are you looking for?' />
                 </div>
@@ -82,10 +82,10 @@ const Banner = () => {
                 </div>
             </div>  
             <div className='w-2/4 mx-auto md:flex md:justify-center flex-col'>
-                <div className='w-10 mx-auto mt-6'>
+                <div className='w-10 mx-auto lg:mt-2 lg:mb-4 md:hidden lg:block'>
                     <img className='w-3/4' src={arrow} alt='arrow' />
                 </div>
-                <div className='-mt-24'>
+                <div className='lg:-mt-24 md:mt-1'>
                     <img  src={ring} alt='ring' />
                 </div>                      
             </div>

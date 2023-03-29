@@ -9,7 +9,7 @@ import {ic_shopping_cart} from 'react-icons-kit/md/ic_shopping_cart';
 import {search} from 'react-icons-kit/icomoon';
 
 const Navbar = () => {
-    const [click, setClick] = useState(true);
+    const [click, setClick] = useState(false);
      // calling our state from the reduxer using useSelector hook of redux
     const state = useSelector(state => state.cartState);
     const clickHandler = () => {
@@ -19,7 +19,7 @@ const Navbar = () => {
         setClick(event.target.value);
     };
     return (
-        <header className='max-w-full'>
+        <header className='mx-auto max-w-5xl'>
             <div className='mt-12'>
                 <div className='flex items-center justify-center mb-3'>
                     <Link to='/'>
@@ -41,7 +41,7 @@ const Navbar = () => {
                     <li className='mx-1'>
                         <Link to='/login' className='buttons nav-buttons px-6 '>Login</Link>
                     </li>
-                        <div className='mx-16 relative cursor-pointer' onClick={clickHandler}>
+                        <div className='lg:mx-16 md:mx-6 relative cursor-pointer' onClick={clickHandler}>
                             <input className={!click ? 'magnifier': 'default-icon'} onChange={changeHandler}  />
                             <div className='absolute top-2 left-3'><Icon icon={search} size={22} /></div>
                         </div>

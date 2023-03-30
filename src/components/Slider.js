@@ -4,6 +4,8 @@ import { Carousel } from 'react-responsive-carousel';
 import { useSelector } from 'react-redux';
 import Slide from '../components/shared/Slide';
 import { Link } from 'react-router-dom';
+import Icon from 'react-icons-kit';
+import {enter} from 'react-icons-kit/icomoon/enter'
 
 const Slider = () => {
     const productsState = useSelector(state=> state.productsState);
@@ -15,9 +17,11 @@ const Slider = () => {
                 {productsState.products.slice(0,5).map(items=> <Slide key={items.id} productData={items}/>)}
             </Carousel>
         </div>
-        <div className='lg:hidden md:hidden flex justify-center mt-4 w-2/3 mx-auto '>
+        <div className='lg:hidden md:hidden flex justify-center mt-4 w-2/3 mx-auto animate-pulse'>
                 <Link className='bg-navy w-full text-lightblue font-bold text-center 
-                text-xl py-4 rounded-xl hpver:bg-sakura' to='/products'>Visit Shop</Link>
+                text-xl py-4 rounded-xl hover:bg-blue' to='/products'>
+                Visit Shop <Icon icon={enter} size={24} /></Link>
+               
         </div>
         </>
     );

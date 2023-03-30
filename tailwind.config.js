@@ -1,7 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+ 
+    purge : {
+      enabled: false,
+      content: ["./src/**/*.{html,js}"],
+    }, 
+  
   theme: {
     colors: {
       'grey': '#919294',
@@ -15,7 +20,8 @@ module.exports = {
       'black': '#000000',
       'navy': '#1c1e2a',
       'blue': '#c5c6d0',
-      'yellow': '#e6cc00'
+      'yellow': '#e6cc00',
+      'green': '#0a6522'
     },
     extend: {
       spacing: {
@@ -23,7 +29,10 @@ module.exports = {
         '260px': '260px',
         '0.75px': '0.75px',
         '35px': '35px',
-        '300px': '300px'
+        '300px': '300px',
+        '450px': '450px',
+        '670px': '670px',
+        '350px': '350px'
       }
     },
   },

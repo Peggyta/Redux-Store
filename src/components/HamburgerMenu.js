@@ -49,7 +49,7 @@ const HamburgerMenu = () => {
     },[]);
     
     return (
-        <div className='relative max-w-md mx-auto'>
+        <div className='relative max-w-md mx-auto mt-6'>
             <div className='md:hidden flex justify-between items-center px-10'>
                 <div className='flex flex-row gap-3'>
                     <div className='relative'>
@@ -63,12 +63,12 @@ const HamburgerMenu = () => {
                         </button>
                     <div>
                         <div className='relative'>
-                            <input className='pl-8 py-1 w-36 sm:w-48 rounded-xl sm:w-auto bg-lightblue rounded-md pr-2' value={searchItem} onChange={searchHandler} type='search' placeholder='search...'/>
-                            <span className='absolute left-2 top-1.5px'><Icon icon={search} size={18} /></span>
+                            <input className='pl-8 shadow-lg py-1 w-36 sm:w-48 rounded-xl sm:w-auto  rounded-md pr-2' value={searchItem} onChange={searchHandler} type='search' placeholder='search...'/>
+                            <span className='absolute left-2 top-1.5px text-grey'><Icon icon={search} size={18} /></span>
                         </div> 
                     </div>
                 </div>
-                <div className='relative mb-4'>
+                <div className='relative mb-0'>
                     <button onClick={()=> setClicked(!clicked)}>
                         {clicked ? <Icon className='text-grey' icon={times} size={26} /> : <Icon className='text-grey' icon={menu} size={22} /> }
                     </button> 

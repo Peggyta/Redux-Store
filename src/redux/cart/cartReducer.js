@@ -10,7 +10,7 @@ const sumItems = items => {
     total+product.quantity,0);
 
     let total = items.reduce((total, product)=>
-    total+product.price*product.quantity,0).toFixed(2);
+    (total+product.price*product.quantity)*0.8,0).toFixed(2);
     return {itemsCounter, total};
 }
 const cartReducer = (state=initialState, action) => {

@@ -69,8 +69,8 @@ const Banner = () => {
             </div>
             <div className='md:flex md:flex-col md:justify-center md:items-center md:w-2/4 mx-auto relative'>
                 <div>
-                <input value={search} className=' bg-lightblue focus:outline-none max-w-5xl lg:px-64 md:px-36 focus:ring 
-                focus:ring-grey pb-4 pt-3 rounded-md placeholder-style' 
+                <input value={search} className=' bg-lightblue focus:outline-none lg:w-670px lg:px-64 md:max-w-5xl md:px-36 focus:ring 
+                focus:ring-grey pb-4 pt-3 rounded-md placeholder-style placeholder:text-xs' 
                 onChange={searchHandler} placeholder='what are you looking for?' />
                 </div>
                 
@@ -89,14 +89,18 @@ const Banner = () => {
                     <img  src={ring} alt='ring' />
                 </div>                      
             </div>
-                <div className='mx-auto md:flex md:items-center md:justify-between w-1/6'>
-                    <div className='text-grey'><Icon icon={truck} size={38} /></div>
-                    <div className='text-grey'><Icon icon={dollar} size={38} /></div>
+                <div className='mx-auto text-center md:flex md:items-center md:justify-between w-3/12 md:mt-4'>
+                    <div className='text-grey '><Icon icon={truck} size={38} />
+                    <p className='md:hidden lg:block text-sm text-black font-bold'>Quick Delivery</p></div>
+                    <div className='text-grey'><Icon icon={dollar} size={38} />
+                    <p className='md:hidden lg:block text-sm text-black font-bold'>Accurate Pricing</p></div>
                 </div>     
-            <div className='mx-auto md:flex md:items-center md:justify-between w-2/4 -mt-24' >
-                    <div className='text-grey'><Icon icon={headphones} size={38} /></div>
-                    <div className='text-grey'><Icon icon={checkSquareO} size={38} /></div>
-            </div>
+                <div className='mx-auto md:flex text-center md:items-center md:justify-between w-3/6 -mt-24' >
+                    <div className='text-grey'><Icon icon={headphones} size={38} />
+                    <p className='md:hidden lg:block text-sm text-black font-bold'>Great Service Team</p></div>
+                    <div className='text-grey'><Icon icon={checkSquareO} size={38} />
+                    <p className='md:hidden lg:block text-sm text-black font-bold'>Jewellery Warranty</p></div>
+                </div>
         </section>
     );
 };

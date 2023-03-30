@@ -26,7 +26,7 @@ const Cart = (props) => {
                         </div>
                         <div className='flex flex-col'>
                         <div>
-                            <button className='add-remove-buttons px-2 mb-1 rounded-xl' onClick={()=> dispatch(increase(props.data))} >+</button>
+                            <button id='add-button' className='add-remove-buttons mb-1 rounded-xl' onClick={()=> dispatch(increase(props.data))} >+</button>
                         </div>
                         <div>
                             {

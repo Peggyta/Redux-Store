@@ -28,19 +28,15 @@ function App() {
         <Navbar />
         <HamburgerMenu />
         <Routes>
-          <Route element={<WithProducts />}>
-            <Route path='/' element={<Banner />} />
-          </Route>
-          <Route element={<WithoutProducts />}>
+          <Route path='/' element={<Banner />} />
             <Route path='/register' element={<Register />} />
             <Route path='/login' element={<Login />} />
             <Route path='/bestselling' element={<Bestselling />} />
             <Route path='/packages' element={<Packages />} />
-            <Route path='/products' element={<Products />} />
+            <Route path='//products' element={<Products />} />
             <Route path='/products/:id' element={<Details />} />
             <Route path='/cart' element={<ShopCart />} />
-           
-          </Route>
+         
           <Route path='/notfound' element={<ErrorPage />} />
           <Route path='/*' element={<Navigate to='/notfound'/>} />
         </Routes>

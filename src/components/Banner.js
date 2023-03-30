@@ -67,29 +67,29 @@ const Banner = () => {
                     <Icon className='md:animate-spin' icon={spinner4} size={35} />
                 </div>}   
             </div>
-            <div className='md:flex md:flex-col md:justify-center md:items-center md:w-2/4 mx-auto relative'>
-                <div>
-                <input value={search} className=' bg-lightblue focus:outline-none lg:w-670px lg:px-64 md:max-w-5xl md:px-36 focus:ring 
+            <div className='md:flex md:flex-col md:justify-center md:items-center md:w-2/4 w-670px mx-auto relative'>
+                <div className='relative'>
+                <input value={search} className=' bg-lightblue focus:outline-none lg:w-670px md:max-w-5xl md:px-36 focus:ring 
                 focus:ring-grey pb-4 pt-3 rounded-md placeholder-style placeholder:text-xs' 
                 onChange={searchHandler} placeholder='what are you looking for?' />
+                <div className='absolute left-10 top-2'>
+                    <p className='font-bold text-xl'>Search:</p>
+                </div>
                 </div>
                 
                 <div className='h-1'>
                     {searchList()}
                 </div> 
-                <div className='absolute left-10 top-2'>
-                    <p className='font-bold text-xl'>Search:</p>
-                </div>
             </div>  
-            <div className='w-2/4 mx-auto md:flex md:justify-center flex-col'>
+            <div className='lg:w-670px md:w-450px mx-auto md:flex md:justify-center flex-col'>
                 <div className='w-10 mx-auto lg:mt-2 lg:mb-4 md:hidden lg:block'>
                     <img className='w-3/4' src={arrow} alt='arrow' />
                 </div>
-                <div className='lg:-mt-24 md:mt-1'>
+                <div className='lg:-mt-24 md:mt-1 lg:w-670px md:w-auto mx-auto'>
                     <img  src={ring} alt='ring' />
                 </div>                      
             </div>
-                <div className='mx-auto text-center md:flex md:items-center md:justify-between w-3/12 md:mt-4'>
+                <div className='mx-auto text-center md:flex md:items-center md:justify-between w-3/12 md:mt-6'>
                     <div className='text-grey '><Icon icon={truck} size={38} />
                     <p className='md:hidden lg:block text-sm text-black font-bold'>Quick Delivery</p></div>
                     <div className='text-grey'><Icon icon={dollar} size={38} />

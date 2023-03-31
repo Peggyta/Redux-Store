@@ -23,7 +23,7 @@
         @apply text-cherry font-normal line-through
     }
     .add-remove-buttons {
-        @apply bg-cherry py-1.5px rounded-md text-xl font-bold ml-2 text-lightblue text-center hover:bg-sakura transition transition-all delay-75 ease-in
+        @apply bg-cherry py-1.5px rounded-md text-xl font-bold ml-2 text-lightblue text-center w-32px transition transition-all delay-75 ease-in
     }
 
     .nav-buttons {

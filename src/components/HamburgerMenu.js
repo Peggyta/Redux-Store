@@ -12,7 +12,7 @@ import {question} from 'react-icons-kit/icomoon/question';
 import '../styles/General.css';
 import { fetchProducts } from '../redux/products/productsAction';
 import HamberScroll from './shared/HamberScroll';
-import SearchList from './SearchList';
+import SearchListMobile from './SearchListMobile';
 
 const HamburgerMenu = () => {
     const dispatch = useDispatch();
@@ -39,7 +39,7 @@ const HamburgerMenu = () => {
     if(showSearch) {
         return (
             <HamberScroll>
-                <SearchList searchProduct={searchProduct} />
+                <SearchListMobile searchProduct={searchProduct} />
             </HamberScroll>
             )
         }
@@ -93,24 +93,24 @@ const HamburgerMenu = () => {
                     <input className='pl-8 shadow-lg py-1 w-48  rounded-xl sm:w-auto  rounded-md pr-2' value={searchItem} onChange={searchHandler} type='search' placeholder='search...'/>
                     <span className='absolute left-2 top-1.5px text-grey'><Icon icon={search} size={18} /></span>
                 </div> 
-                <div className='flex gap-3'>
+                <div className='flex gap-6'>
+                    <div>
+                        <button onClick={()=> setOpen(!open)}>
+                            <Icon className='text-grey' icon={user} size={22} />
+                        </button>
+                    </div>   
                     <div className='relative'>
                         <Link to='/cart'>
                             <span className='item-counter absolute -left-2 -bottom-1 bg-cherry rounded-full text-lightblue text-sm font-bold'>{state.itemsCounter}</span>
                             <Icon className='text-rosewood' icon={ic_shopping_cart} size={30} />
                         </Link>  
-                    </div>    
-                    <div>
-                        <button onClick={()=> setOpen(!open)}>
-                            <Icon className='text-grey' icon={user} size={22} />
-                        </button>
-                    </div>
+                    </div> 
                 </div>
             </div>
-            <div className='absolute left-28 z-10 bg-lightblue'>
+            <div className={showSearch? 'results': 'no-result-menu'}  onClick={()=> setShowSearch(!showSearch)}>
                 {searchList()}
             </div>
-            <div className={open ? 'show-login-box': 'hide-login-box'}>
+            <div onClick={()=> setOpen(!open)} className={open ? 'show-login-box': 'hide-login-box'}>
                 <ul>
                     <Link to='/register'><li>Register</li></Link>
                     <Link to='/login'><li>Login</li></Link>

@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { searchTitle } from '../../helper/functions';
 
-const SearchCard = ({productData}) => {
+const SearchCardMobile = ({productData}) => {
     return (
         <div className='w-full pb-2 hover:bg-cement'>
-            <Link to={`/products/${productData.id}`} className='text-lg font-semibold'>{searchTitle(productData.title)}</Link>
+           <Link to={`/products/${productData.id}`}>{searchTitle(productData.title)}</Link> 
         </div>
     );
 };
 
-export default SearchCard;
+export default SearchCardMobile;

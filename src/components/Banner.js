@@ -95,7 +95,7 @@ const Banner = () => {
                     <div className='text-grey'><Icon icon={dollar} size={38} />
                     <p className='md:hidden lg:block text-sm text-black font-bold'>Accurate Pricing</p></div>
                 </div>     
-                <div className='mx-auto md:flex text-center md:items-center md:justify-between w-3/6 -mt-24' >
+                <div className='max-w-3xl mx-auto md:flex text-center md:items-center md:justify-between md:w-3/6 lg:w-7/12 -mt-24' >
                     <div className='text-grey'><Icon icon={headphones} size={38} />
                     <p className='md:hidden lg:block text-sm text-black font-bold'>Great Service Team</p></div>
                     <div className='text-grey'><Icon icon={checkSquareO} size={38} />

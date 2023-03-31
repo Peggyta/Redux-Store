@@ -3,7 +3,7 @@ import { fetchProducts } from '../redux/products/productsAction';
 import { useSelector, useDispatch } from 'react-redux';
 import Product from './shared/Product';
 import Loader from './shared/Loader';
-import '../styles/Navbar.css';
+import '../styles/General.css';
 
 const Products = () => {
   const [loadMore, setLoadMore] = useState(8);

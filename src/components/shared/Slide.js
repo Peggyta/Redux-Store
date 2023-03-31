@@ -6,7 +6,7 @@ import {addItem, removeItem, increase, decrease} from '../../redux/cart/cartActi
 //icons :
 import Icon from 'react-icons-kit';
 import {ic_delete_twotone} from 'react-icons-kit/md/ic_delete_twotone';
-import '../../styles/Navbar.css';
+import '../../styles/General.css';
 
 const Slide = ({productData}) => {
      // calling our state from the reduxer using useSelector hook of redux

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import '../styles/Navbar.css';
+import '../styles/General.css';
 import { Link } from 'react-router-dom';
 import logo from '../images/logo.png';
 import {Icon} from 'react-icons-kit';
@@ -19,11 +19,11 @@ const Navbar = () => {
         setClick(event.target.value);
     };
     return (
-        <header className='mx-auto max-w-5xl'>
-            <div className='mt-12'>
+        <header className='mx-auto max-w-5xl hidden md:block lg:block'>
+            <div className='lg:mt-12 md:mt-12 -mt-6'>
                 <div className='flex items-center justify-center mb-3'>
                     <Link to='/'>
-                        <img className='w-32' src={logo} alt='logo' />
+                        <img className='md:w-32 lg:w-32' src={logo} alt='logo' />
                     </Link>
                 </div>
                 <ul className='hidden md:block md:flex md:items-center md:justify-center text-grey mb-12'>

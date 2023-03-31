@@ -8,6 +8,7 @@ import {ic_delete_twotone} from 'react-icons-kit/md/ic_delete_twotone';
 import {addItem, removeItem, increase, decrease} from '../../redux/cart/cartAction';
 //function :
 import { itemsTitle, numberOfItems, isInCart } from '../../helper/functions';
+import '../../styles/General.css';
 
 const Product = ({productData}) => {
     
@@ -26,12 +27,12 @@ const Product = ({productData}) => {
                 </div>
                 <div className='flex items-center'>
                     {numberOfItems(state, productData.id)===1 &&
-                    <button className='bg-cement px-1 pt-1 rounded-md text-center leading-normal hover:bg-grey transition transition-all delay-75' onClick={()=> dispatch(removeItem(productData))}><Icon className='leading-4 pl-0.75px hover:text-lightblue' icon={ic_delete_twotone} size={24} /></button>}
+                    <button className='trash-icon bg-cement w-32px pt-1 rounded-md leading-normal hover:bg-grey transition transition-all delay-75' onClick={()=> dispatch(removeItem(productData))}><Icon icon={ic_delete_twotone} size={27} /></button>}
                     {numberOfItems(state, productData.id) > 1 &&
-                    <button className='add-remove-buttons px-3' onClick={()=> dispatch(decrease(productData))}>-</button>}
+                    <button className='add-remove-buttons hover:bg-sakura' onClick={()=> dispatch(decrease(productData))}>-</button>}
                     {numberOfItems(state, productData.id)> 0 && <span className='pl-2 font-bold'>{numberOfItems(state,productData.id)}</span>}
                     {isInCart(state, productData.id) ? 
-                    <button className='add-remove-buttons px-2' onClick={()=> dispatch(increase(productData))}>+</button> : 
+                    <button className='add-remove-buttons bg-olive hover:bg-grass' onClick={()=> dispatch(increase(productData))}>+</button> : 
                     <button className='bg-rosewood rounded-md font-bold text-sm px-3 py-1 hover:bg-cream' onClick={()=> dispatch(addItem(productData))}>Add to cart</button>}
                 </div>
             </div>  

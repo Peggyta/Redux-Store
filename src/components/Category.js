@@ -24,7 +24,6 @@ const Category = () => {
                 </div>
                 <div className=' flex items-center flex-col cursor-pointer justify-center'>
                     <img className='h-12' src={coat} alt='coat' />
-                
                     <p>Menswear</p>
                 </div>
             </div>

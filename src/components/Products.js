@@ -7,11 +7,13 @@ import '../styles/General.css';
 
 const Products = () => {
   const [loadMore, setLoadMore] = useState(8);
+  const [showLoadBtn, setShowLoadBtn] = useState(true);
   const dispatch = useDispatch();
   const productsState = useSelector(state => state.productsState);
 
   const loadHandler = () => {
-    setLoadMore((prevValue)=> prevValue+8);
+    setLoadMore((prevValue)=> prevValue+12);
+    setShowLoadBtn(!showLoadBtn);
   };
 
   useEffect(()=> {
@@ -21,7 +23,8 @@ const Products = () => {
 
     return (
       <div className='max-w-5xl mx-auto'>
-        <div className='grid col-auto lg:mx-12 md:mx-6 place-items-center grid-col-1 mt-32 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 sm:mx-16 '>
+        <div className='grid col-auto lg:mx-12 md:mx-6 place-items-center grid-col-1 mt-32 lg:grid-cols-4 
+        md:grid-cols-3 sm:grid-cols-2 sm:mx-16 ' onClick={()=> setShowLoadBtn(!showLoadBtn)}>
           {
             productsState.loading ? productsState.products.slice(0,loadMore).map 
             (loading => <Loader key={loading.id} loadData={loading} />) :  
@@ -31,7 +34,7 @@ const Products = () => {
           }
         </div>
         <div className='flex justify-center mt-4 mb-6'>
-          <button className='bg-cherry px-12 py-2 hover:bg-sakura rounded-md text-lightblue font-bold' onClick={loadHandler}>Load more</button>
+          <button className={showLoadBtn ? 'show-load-btn': 'hide-load-btn'} onClick={loadHandler}>Load more</button>
         </div>
       </div>
         

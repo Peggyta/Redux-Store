@@ -20,8 +20,6 @@ const Footer = () => {
                     sed do eiusmod tempor incididunt ut labore et dolore magna 
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
                     ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate 
-                    velit esse cillum dolore eu
                     </p>
                 </div>
                 <div className='flex flex-col items-center lg:flex-row md:flex-row justify-between lg:w-1/2 md:w-2/4 md:pt-6 mx-auto lg:pt-6 w-4/6 pt-4'>

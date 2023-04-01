@@ -62,17 +62,17 @@ const HamburgerMenu = () => {
                     </Link>
                 </div>
                 <div className={clicked ? 'mobile-navbar': 'no-menu'} onClick={()=> setClicked(!clicked)}>
-                    <ul className='mt-6 font-semibold text-lg'>
-                        <li className='py-4'>
+                    <ul className='mt-10 font-semibold text-lg'>
+                        <li className='py-3'>
                             <Link to='/'>Home</Link>
                         </li>
-                        <li className='py-4'>
+                        <li className='py-3'>
                             <Link to='/products'>Products</Link>
                         </li>
-                        <li className='py-4'>
+                        <li className='py-3'>
                             <Link to='/packages'>Packages</Link>
                         </li>
-                        <li className='py-4'>
+                        <li className='py-3'>
                             <Link to='/bestselling'>Bestselling</Link>
                         </li>
                     </ul>
@@ -80,7 +80,7 @@ const HamburgerMenu = () => {
                 <div className='relative mb-0'>
                     <button onClick={()=> setClicked(!clicked)}>
                         {clicked ?
-                        <div className='absolute -top-16 right-0 z-10'>
+                        <div className='absolute -top-20 right-0 z-10'>
                             <Icon className='text-grey' icon={times} size={32} />
                         </div>
                         : <Icon className='text-grey' icon={menu} size={22} /> }

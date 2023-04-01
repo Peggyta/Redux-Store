@@ -2,8 +2,6 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import store from './redux/store';
-import WithProducts from './components/WithProducts';
-import WithoutProducts from './components/WithoutProducts';
 import Navbar from './components/Navbar';
 import Details from './components/Details';
 import HamburgerMenu from './components/HamburgerMenu';
@@ -35,8 +33,7 @@ function App() {
             <Route path='/packages' element={<Packages />} />
             <Route path='//products' element={<Products />} />
             <Route path='/products/:id' element={<Details />} />
-            <Route path='/cart' element={<ShopCart />} />
-         
+            <Route path='/cart' element={<ShopCart />} />      
           <Route path='/notfound' element={<ErrorPage />} />
           <Route path='/*' element={<Navigate to='/notfound'/>} />
         </Routes>

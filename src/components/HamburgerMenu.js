@@ -11,8 +11,8 @@ import {search} from 'react-icons-kit/icomoon';
 import {question} from 'react-icons-kit/icomoon/question';
 import '../styles/General.css';
 import { fetchProducts } from '../redux/products/productsAction';
-import HamberScroll from './shared/HamberScroll';
-import SearchListMobile from './SearchListMobile';
+import HamberScroll from '../search/HamberScroll';
+import SearchListMobile from '../search/SearchListMobile';
 
 const HamburgerMenu = () => {
     const dispatch = useDispatch();

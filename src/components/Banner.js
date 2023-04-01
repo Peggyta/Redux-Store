@@ -9,8 +9,8 @@ import {checkSquareO} from 'react-icons-kit/fa/checkSquareO';
 import {dollar} from 'react-icons-kit/fa/dollar';
 import {headphones} from 'react-icons-kit/iconic/headphones';
 import { useSelector } from 'react-redux';
-import Scroll from './shared/Scroll';
-import SearchList from './SearchList';
+import Scroll from '../search/Scroll';
+import SearchList from '../search/SearchList';
 
 
 const Banner = () => {

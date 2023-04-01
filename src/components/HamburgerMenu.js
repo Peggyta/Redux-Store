@@ -107,7 +107,7 @@ const HamburgerMenu = () => {
                     </div> 
                 </div>
             </div>
-            <div className={showSearch? 'results': 'no-result-menu'}  onClick={()=> setShowSearch(!showSearch)}>
+            <div className={showSearch? 'results': null}  onClick={()=> setShowSearch(!showSearch)}>
                 {searchList()}
             </div>
             <div onClick={()=> setOpen(!open)} className={open ? 'show-login-box': 'hide-login-box'}>

@@ -16,10 +16,10 @@ const Product = ({productData}) => {
      // calling our state from the reduxer using useSelector hook of redux
     const state = useSelector(state => state.cartState);
     return (
-        <div className='flex flex-col items-center py-3 px-4 md:w-auto my-4 border rounded-2xl border-cement md:px-6 sm:px-10'>
+        <div className='flex flex-col items-center px-4 py-3 md:w-auto my-4 border rounded-2xl border-cement md:px-6 sm:px-10'>
             <img className='w-32 h-32' src={productData.image} alt='product' />
-            <h3 className='font-bold'>{itemsTitle(productData.title)}</h3>
-            <p className='no-off-price'>Price: {productData.price} $</p>
+            <h3 className='font-bold text-sm'>{itemsTitle(productData.title)}</h3>
+            <p className='no-off-price text-sm'>Price: {productData.price} $</p>
             <p className='mb-2 text-grass font-bold'>Price: {(productData.price*0.8).toFixed(2)} $</p>
             <div className='flex justify-between w-40 gap-2  items-center'>
                 <div>

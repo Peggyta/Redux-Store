@@ -110,14 +110,23 @@
     width: 224px;
 }
 
-.no-result-menu {
-    background-color: green;
-}
+/*carousel*/
+.carousel .control-arrow {
+    background-color: transparent !important; 
+    top: unset !important;
+    bottom: 47% !important;
+    margin-top: -13px !important;
+    height: 30px !important;
+ }
+
 
 @media (min-width: 320px) and (max-width: 644px) {
     .results {
         width: 192px;
     }
+    .carousel .control-arrow {
+       display:none !important;
+     }
 }
 
 @media (min-width:768px){

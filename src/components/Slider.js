@@ -12,16 +12,15 @@ const Slider = () => {
     
     return (
         <>
-        <div className='w-2/3 md:block lg:block md:w-1/2 lg:w-1/2 mx-auto lg:mt-36 md:mt-36 mt-12'>
+        <div className='w-full lg:max-w-3xl md:max-w-2xl md:block lg:block  mx-auto lg:mt-36 md:mt-36 mt-12'>
             <Carousel autoPlay infiniteLoop interval={4000} showArrows showStatus={false} showThumbs={false} >
                 {productsState.products.slice(0,5).map(items=> <Slide key={items.id} productData={items}/>)}
             </Carousel>
         </div>
-        <div className='lg:hidden md:hidden flex justify-center mt-4 w-2/3 mx-auto animate-pulse'>
-                <Link className='bg-navy w-full text-lightblue font-bold text-center 
-                text-xl py-4 rounded-xl hover:bg-blue' to='/products'>
-                Visit Shop <Icon icon={enter} size={24} /></Link>
-               
+        <div className='lg:hidden bg-blue w-full md:hidden flex justify-center mx-auto animate-pulse'>
+                <Link className='bg-stone w-full text-lightblue font-bold text-center 
+                text-3xl sm:py-6 py-4 hover:bg-blue' to='/products'>
+                Visit Shop <Icon icon={enter} size={28} /></Link>  
         </div>
         </>
     );

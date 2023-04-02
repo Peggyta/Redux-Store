@@ -22,7 +22,7 @@ const ShopCart = () => {
                 // md:w-1/2 sm:w-4/6 w-6/6
                 state.itemsCounter > 0 && 
                     <div className='flex flex-col mx-auto max-w-3xl lg:w-full md:w-5/6 sm:w-3/4 w-11/12 items-center rounded-xl my-2 py-3  mx-4 bg-blue/25'>
-                        <div className='font-semibold'>
+                        <div className='font-semibold text-center'>
                             <p><span>Total Items: </span>{state.itemsCounter}</p>
                             <p><span>Total Price: </span>{state.total} $</p>
                         </div>

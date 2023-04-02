@@ -27,7 +27,7 @@ const Product = ({productData}) => {
                 </div>
                 <div className='flex items-center'>
                     {numberOfItems(state, productData.id)===1 &&
-                    <button className='trash-icon bg-cement w-32px pt-1 rounded-md leading-normal hover:bg-grey transition transition-all delay-75' onClick={()=> dispatch(removeItem(productData))}><Icon icon={ic_delete_twotone} size={27} /></button>}
+                    <button className='block text-center bg-cement w-32px pt-1 rounded-md leading-normal hover:bg-grey transition transition-all delay-75' onClick={()=> dispatch(removeItem(productData))}><Icon icon={ic_delete_twotone} size={27} /></button>}
                     {numberOfItems(state, productData.id) > 1 &&
                     <button className='add-remove-buttons hover:bg-sakura' onClick={()=> dispatch(decrease(productData))}>-</button>}
                     {numberOfItems(state, productData.id)> 0 && <span className='pl-2 font-bold'>{numberOfItems(state,productData.id)}</span>}

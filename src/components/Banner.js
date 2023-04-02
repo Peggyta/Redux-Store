@@ -89,13 +89,13 @@ const Banner = () => {
                     <img  src={ring} alt='ring' />
                 </div>                      
             </div>
-                <div className='mx-auto text-center md:flex md:items-center md:justify-between w-3/12 md:mt-6'>
+                <div className='mx-auto text-center md:flex md:items-center md:justify-between md:w-3/12 lg:w-330px md:mt-6'>
                     <div className='text-grey '><Icon icon={truck} size={38} />
                     <p className='md:hidden lg:block text-sm text-black font-bold'>Quick Delivery</p></div>
                     <div className='text-grey'><Icon icon={dollar} size={38} />
                     <p className='md:hidden lg:block text-sm text-black font-bold'>Accurate Pricing</p></div>
                 </div>     
-                <div className='max-w-3xl mx-auto md:flex text-center md:items-center md:justify-between md:w-3/6 lg:w-7/12 -mt-24' >
+                <div className='max-w-3xl mx-auto md:flex text-center md:items-center md:justify-between md:w-3/6 lg:w-670px -mt-24' >
                     <div className='text-grey'><Icon icon={headphones} size={38} />
                     <p className='md:hidden lg:block text-sm text-black font-bold'>Great Service Team</p></div>
                     <div className='text-grey'><Icon icon={checkSquareO} size={38} />

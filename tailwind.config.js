@@ -2,7 +2,10 @@
 
 module.exports = {
 
-  purge: ["./src/**/*.{html,js}"],
+  purge: {
+    enabled: false,
+    content:["./src/**/*.{html,js}"]
+  }, 
   
   theme: {
     colors: {
@@ -34,7 +37,8 @@ module.exports = {
         '400px': '400px',
         '450px': '450px',
         '670px': '670px',
-        '350px': '350px'
+        '350px': '350px',
+        '330px': '330px'
       }
     },
   },

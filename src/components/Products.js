@@ -18,7 +18,6 @@ const Products = () => {
 
   useEffect(()=> {
     if(!productsState.products.lenght)dispatch(fetchProducts());
-
   },[]);
 
     return (

@@ -18,6 +18,7 @@ import Footer from './components/Footer';
 import Toggle from './components/shared/Toggle';
 import './App.css';
 
+
 function App() {
   return (
     <div className="App">
@@ -31,8 +32,9 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/bestselling' element={<Bestselling />} />
             <Route path='/packages' element={<Packages />} />
-            <Route path='//products' element={<Products />} />
+            <Route path='/products' element={<Products />} />
             <Route path='/products/:id' element={<Details />} />
+            <Route path='/products/:category' element={<Products />} />
             <Route path='/cart' element={<ShopCart />} />      
           <Route path='/notfound' element={<ErrorPage />} />
           <Route path='/*' element={<Navigate to='/notfound'/>} />

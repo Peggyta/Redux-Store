@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import pc from '../images/pc.png';
 import dress from '../images/dress.png';
 import coat from '../images/coat.png';
 import diamond from '../images/diamond.png';
 
 const Category = () => {
-    
     return (
         <div className='max-w-lg mx-auto mt-32'>
             <div className='flex px-6 lg:px-0 md:px-0 w-full justify-center 

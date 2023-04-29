@@ -8,12 +8,12 @@ import {facebook} from 'react-icons-kit/icomoon/facebook';
 
 const Footer = () => {
     return (
-        <footer className='relative mt-12'>
-            <img className='hidden md:block sm:block' src={footer} alt='footer' />
+        <footer className='relative mt-12 flex items-center flex-col max-w-full mx-auto'>
+            <img className='hidden md:block sm:block w-full' src={footer} alt='footer' />
             <div className='absolute top-2 lg:top-35px md:top-2 sm:top-2 flex justify-center w-full '>
                 <img className='w-28 lg:w-48  md:w-40' src={logo2} alt='logo' />
             </div>
-            <div className='h-auto bg-navy text-cement pt-6'>
+            <div className='h-auto bg-navy w-full text-cement pt-6'>
                 <div className='lg:w-2/3 w-3/4 sm:pt-4 md:pt-4 mx-auto pt-24 '>
                     <p className=' text-center'>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, 

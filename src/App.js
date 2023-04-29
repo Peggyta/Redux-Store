@@ -17,7 +17,11 @@ import ErrorPage from './error-page';
 import Footer from './components/Footer';
 import Toggle from './components/shared/Toggle';
 import './App.css';
-
+import Category from './components/Category';
+import Dress from './components/categories/Dress';
+import Electronics from './components/categories/Electronics';
+import MensWear from './components/categories/Menswear';
+import Jewellery from './components/categories/Jewellery';
 
 function App() {
   return (
@@ -34,11 +38,15 @@ function App() {
             <Route path='/packages' element={<Packages />} />
             <Route path='/products' element={<Products />} />
             <Route path='/products/:id' element={<Details />} />
-            <Route path='/products/:category' element={<Products />} />
+            <Route path="/products/categories/women's clothing" element={<Dress />} />
+            <Route path='/products/categories/electronics' element={<Electronics />} />
+            <Route path='/products/categories/menclothing' element={<MensWear />} />
+            <Route path='/products/categories/jewelery' element={<Jewellery />} />
             <Route path='/cart' element={<ShopCart />} />      
           <Route path='/notfound' element={<ErrorPage />} />
           <Route path='/*' element={<Navigate to='/notfound'/>} />
         </Routes>
+        <Category />
         <Routes>
           <Route path='/' element={<Slider />} />
         </Routes>

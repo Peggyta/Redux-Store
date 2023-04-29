@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 //icons:
 import Icon from 'react-icons-kit';
 import {coinDollar} from 'react-icons-kit/icomoon/coinDollar';
@@ -6,7 +6,6 @@ import {undo2} from 'react-icons-kit/icomoon/undo2';
 import {ic_star} from 'react-icons-kit/md/ic_star';
 import { Link, useParams } from 'react-router-dom';
 import { useSelector} from 'react-redux';
-import { getComments } from '../api/comments';
 
 
 const Details = () => {
@@ -14,14 +13,7 @@ const Details = () => {
     const data = useSelector(state => state.productsState.products);
     const product = data[id-1];
     const {image, title, description, category, price, rating} = product;
-    const [ comments, setComments] = useState([]);
 
-    useEffect(()=> {
-        const fetchComments = async() => {
-            setComments(await getComments());
-        }
-        fetchComments();
-    },[])
     
     return (
         <>
@@ -29,7 +21,7 @@ const Details = () => {
             <div>
                 <img className=' mx-auto w-64' src={image} alt='product' />
             </div>
-            <div className='md:w-3/6 border border-cement rounded-xl p-6 w-5/6   '>
+            <div className='md:w-3/6 border border-cement rounded-xl p-6 w-5/6'>
                 <h3 className='font-bold text-lg pb-3'>{title}</h3>
                 <p className='pb-2'>{description}</p>
                 <p className='font-bold pb-2'>Category: {category}</p>
@@ -47,12 +39,6 @@ const Details = () => {
                 </div>
             </div>
         </div>
-         <div className='mx-auto md:flex md:justify-center flex-col w-3/4 md:w-4/6 mb-6'>
-            <h3 className='font-bold text-xl mb-3'>Comments</h3>
-            {comments.map(items => <div className='border-b pt-1 pb-2 border-cement' key={items.id}>
-                <p className='font-semibold pl-1 text-grey pb-2'>{items.email}</p>
-                <p className='pl-4'>{items.body}</p></div>)}
-     </div>
      </>
     );
 };

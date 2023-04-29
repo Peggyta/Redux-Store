@@ -6,28 +6,34 @@ import coat from '../images/coat.png';
 import diamond from '../images/diamond.png';
 
 const Category = () => {
+    
     return (
-        <div>
-            <h3 className='font-bold text-xl md:hidden lg:hidden block pl-4 mt-4'>Categories:</h3>
-            <div className='lg:hidden md:hidden inline-block flex max-w-md w-full mx-auto justify-center 
-            sm:gap-16 gap-4 px-2 text-sm font-semibold mt-6 text-center items-center'>
-                <div className='cursor-pointer'>
-                    <Link className='flex items-center flex-col justify-center' to='/'>
-                        <img className='h-12' src={pc} alt='electronics' />
+        <div className='max-w-lg mx-auto mt-32'>
+            <div className='flex px-6 lg:px-0 md:px-0 w-full justify-center 
+             text-sm font-semibold text-center lg:gap-10 md:gap-10 gap-6 items-center'>
+                <div className='shadow-lg rounded-md px-3 py-1'>
+                    <Link className='flex items-center flex-col justify-center' to='/products/categories/electronics'>
+                        <img className='lg:h-20 md:h-20 h-12' src={pc} alt='electronics' />
                         <p>Electronics</p>
                     </Link>
                 </div>
-                <div className=' flex items-center flex-col cursor-pointer justify-center'>
-                    <img className='h-12' src={dress} alt='dress' />
-                    <p>Dress</p>
+                <div className='shadow-lg rounded-md px-3  py-1'>
+                    <Link className='flex items-center flex-col flex-col justify-center' to="/products/categories/women's clothing">
+                        <img className='lg:h-20 md:h-20 h-12' src={dress} alt='dress' />
+                        <p>Dress</p>
+                    </Link>
                 </div>
-                <div className=' flex items-center flex-col cursor-pointer justify-center'>
-                    <img className='h-12' src={diamond} alt='diamond' />
-                   <p>Jewellery</p> 
+                <div className='shadow-lg rounded-md px-3 py-1'>
+                    <Link className='flex items-center flex-col justify-center' to='/products/categories/jewelery'>
+                        <img className='lg:h-20 md:h-20 h-12' src={diamond} alt='jewellery' />
+                        <p>Jewellery</p>
+                    </Link>
                 </div>
-                <div className=' flex items-center flex-col cursor-pointer justify-center'>
-                    <img className='h-12' src={coat} alt='coat' />
-                    <p>Menswear</p>
+                <div className='shadow-lg rounded-md px-3 py-1'>
+                    <Link className='flex items-center flex-col justify-center' to='/products/categories/menclothing'>
+                        <img className='lg:h-20 md:h-20 h-12' src={coat} alt='clothing' />
+                        <p>Menswear</p>
+                    </Link>
                 </div>
             </div>
         </div>

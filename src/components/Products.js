@@ -28,9 +28,11 @@ const Products = () => {
             productsState.loading ? productsState.products.slice(0,loadMore).map 
             (loading => <Loader key={loading.id} loadData={loading} />) :  
             productsState.products.error ? <h2 className='font-bold text-center'>an error occurred!</h2> :
-            productsState.products.slice(0, loadMore).map (product => <Product key={product.id}
-            productData={product} />)
+            productsState.products.slice(0, loadMore).map (product => ( 
+              <Product key={product.id} productData={product} />
+            ))
           }
+          
         </div>
         <div className='flex justify-center mt-4 mb-6'>
           <button className={showLoadBtn ? 'show-load-btn': 'hide-load-btn'} onClick={loadHandler}>Load more</button>

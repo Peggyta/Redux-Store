@@ -36,10 +36,10 @@ const Navbar = () => {
                     </div>    
                     </li>
                     <li>
-                        <Link to='/register' className='buttons nav-buttons lg:px-4 md:px-2'>Register</Link>
+                        <Link to='/register' className='buttons nav-buttons lg:px-4 md:px-2 pb-2'>Register</Link>
                     </li>
                     <li className='mx-1'>
-                        <Link to='/login' className='buttons nav-buttons lg:px-6 md:px-4 '>Login</Link>
+                        <Link to='/login' className='buttons nav-buttons lg:px-6 md:px-4 pb-2 '>Login</Link>
                     </li>
                         <div className='lg:mx-16 md:mr-3 md:ml-4 relative cursor-pointer' onClick={clickHandler}>
                             <input className={!click ? 'magnifier': 'default-icon'} onChange={changeHandler}  />

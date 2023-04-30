@@ -10,7 +10,7 @@ const Footer = () => {
     return (
         <footer className='relative mt-12 flex items-center flex-col max-w-full mx-auto'>
             <img className=' w-full' src={footer} alt='footer' />
-            <div className='absolute top-0 lg:top-35px md:top-2 sm:top-2 flex justify-center w-full '>
+            <div className='absolute -top-3 lg:top-35px lg:top-6 md:top-2 sm:top-2 flex justify-center w-full '>
                 <img className='w-24 md:w-40 lg:w-48 sm:w-28  ' src={logo2} alt='logo' />
             </div>
             <div className='h-auto bg-navy w-full text-cement lg:pt-6 md:pt-6'>

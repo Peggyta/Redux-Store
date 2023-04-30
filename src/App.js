@@ -16,12 +16,13 @@ import Products from './components/Products';
 import ErrorPage from './error-page';
 import Footer from './components/Footer';
 import Toggle from './components/shared/Toggle';
-import './App.css';
+import ScrollToTop from './components/shared/ScrollToTop';
 import Category from './components/Category';
 import Dress from './components/categories/Dress';
 import Electronics from './components/categories/Electronics';
 import MensWear from './components/categories/Menswear';
 import Jewellery from './components/categories/Jewellery';
+import './App.css';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Toggle />
         <Navbar />
         <HamburgerMenu />
+        <ScrollToTop />
         <Routes>
           <Route path='/' element={<Banner />} />
             <Route path='/register' element={<Register />} />

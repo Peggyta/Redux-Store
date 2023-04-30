@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import pc from '../images/pc.png';
 import dress from '../images/dress.png';
 import coat from '../images/coat.png';

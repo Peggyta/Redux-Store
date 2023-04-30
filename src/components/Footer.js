@@ -9,17 +9,17 @@ import {facebook} from 'react-icons-kit/icomoon/facebook';
 const Footer = () => {
     return (
         <footer className='relative mt-12 flex items-center flex-col max-w-full mx-auto'>
-            <img className='hidden md:block sm:block w-full' src={footer} alt='footer' />
-            <div className='absolute top-2 lg:top-35px md:top-2 sm:top-2 flex justify-center w-full '>
-                <img className='w-28 lg:w-48  md:w-40' src={logo2} alt='logo' />
+            <img className=' w-full' src={footer} alt='footer' />
+            <div className='absolute top-0 lg:top-35px md:top-2 sm:top-2 flex justify-center w-full '>
+                <img className='w-24 md:w-40 lg:w-48 sm:w-28  ' src={logo2} alt='logo' />
             </div>
-            <div className='h-auto bg-navy w-full text-cement pt-6'>
-                <div className='lg:w-2/3 w-3/4 sm:pt-4 md:pt-4 mx-auto pt-24 '>
-                    <p className=' text-center'>
+            <div className='h-auto bg-navy w-full text-cement lg:pt-6 md:pt-6'>
+                <div className='lg:w-2/3 w-3/4 sm:pt-4 md:pt-4 mx-auto pt-12 '>
+                    <p className=' text-center mt-3'>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor incididunt ut labore et dolore magna 
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    aliqua. Ut enim ad minimniam quis nostrud exercitation
                     </p>
                 </div>
                 <div className='flex flex-col items-center lg:flex-row md:flex-row justify-between lg:w-1/2 md:w-2/4 md:pt-6 mx-auto lg:pt-6 w-4/6 pt-4'>

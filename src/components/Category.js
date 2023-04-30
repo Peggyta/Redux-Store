@@ -7,34 +7,32 @@ import diamond from '../images/diamond.png';
 
 const Category = () => {
     return (
-        <div className='max-w-lg mx-auto mt-32'>
-            <div className='flex px-6 lg:px-0 md:px-0 w-full justify-center 
-             text-sm font-semibold text-center lg:gap-10 md:gap-10 gap-6 items-center'>
-                <div className='shadow-lg rounded-md px-3 py-1'>
+        <div className='max-w-lg mx-auto mt-32 grid place-items-center 
+        grid-cols-2 lg:grid-cols-4 md:grid-cols-4 gap-4'>
+                <div className='shadow-lg rounded-md px-3 py-1 w-28'>
                     <Link className='flex items-center flex-col justify-center' to='/products/categories/electronics'>
                         <img className='lg:h-20 md:h-20 h-12' src={pc} alt='electronics' />
                         <p>Electronics</p>
                     </Link>
                 </div>
-                <div className='shadow-lg rounded-md px-3  py-1'>
+                <div className='shadow-lg rounded-md px-3 w-28 py-1'>
                     <Link className='flex items-center flex-col flex-col justify-center' to="/products/categories/women's clothing">
                         <img className='lg:h-20 md:h-20 h-12' src={dress} alt='dress' />
                         <p>Dress</p>
                     </Link>
                 </div>
-                <div className='shadow-lg rounded-md px-3 py-1'>
+                <div className='shadow-lg rounded-md px-3 w-28 py-1'>
                     <Link className='flex items-center flex-col justify-center' to='/products/categories/jewelery'>
                         <img className='lg:h-20 md:h-20 h-12' src={diamond} alt='jewellery' />
                         <p>Jewellery</p>
                     </Link>
                 </div>
-                <div className='shadow-lg rounded-md px-3 py-1'>
+                <div className='shadow-lg rounded-md px-3 w-28 py-1'>
                     <Link className='flex items-center flex-col justify-center' to='/products/categories/menclothing'>
                         <img className='lg:h-20 md:h-20 h-12' src={coat} alt='clothing' />
                         <p>Menswear</p>
                     </Link>
                 </div>
-            </div>
         </div>
     );
 };

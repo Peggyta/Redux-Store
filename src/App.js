@@ -17,7 +17,6 @@ import ErrorPage from './error-page';
 import Footer from './components/Footer';
 import Toggle from './components/shared/Toggle';
 import ScrollToTop from './components/shared/ScrollToTop';
-import Category from './components/Category';
 import Dress from './components/categories/Dress';
 import Electronics from './components/categories/Electronics';
 import MensWear from './components/categories/Menswear';
@@ -48,7 +47,6 @@ function App() {
           <Route path='/notfound' element={<ErrorPage />} />
           <Route path='/*' element={<Navigate to='/notfound'/>} />
         </Routes>
-        <Category />
         <Routes>
           <Route path='/' element={<Slider />} />
         </Routes>

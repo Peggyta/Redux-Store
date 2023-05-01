@@ -11,6 +11,7 @@ import {headphones} from 'react-icons-kit/iconic/headphones';
 import { useSelector } from 'react-redux';
 import Scroll from '../search/Scroll';
 import SearchList from '../search/SearchList';
+import Category from './Category';
 
 
 const Banner = () => {
@@ -60,6 +61,7 @@ const Banner = () => {
     }
 
     return (
+        <>
         <section className='hidden md:block'>
             <div className='mx-auto mt-6 w-1/6'>
                 {loading? <img src={banner.image} alt='banner' /> : 
@@ -102,6 +104,8 @@ const Banner = () => {
                     <p className='md:hidden lg:block text-sm text-black font-bold'>Jewellery Warranty</p></div>
                 </div>
         </section>
+        <Category />
+        </>
     );
 };
 

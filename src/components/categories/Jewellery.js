@@ -12,7 +12,7 @@ const Jewellery = () => {
     return (
         <div className='max-w-5xl mx-auto'>
             <div className='mt-16 lg:ml-16 md:ml-16 lg:block md:block flex justify-center'>
-                <Link className='bg-cherry transition delay-75 hover:bg-sakura px-4 py-2 font-semibold text-lightblue rounded-lg' to='/products'><Icon icon={undo2}/>Back to shop</Link>
+                <Link className='bg-cherry transition delay-75 hover:bg-sakura px-4 py-2 font-semibold text-lightblue rounded-lg' to='/'><Icon icon={undo2}/> Back</Link>
             </div>
             <ItemsList info={jewellery} /> 
         </div>
